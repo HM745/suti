@@ -5,5 +5,89 @@
 }
 main {
     margin:auto;
-    width: 80%;
+    max-width: 80%;
+    font-family: 'Schoolbell';
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 5px;
+    margin-bottom:50px ;
+    margin-top: 50px;
+}
+body {
+    background-image: url(background.png);
+}
+@font-face {
+    font-family: 'Schoolbell';
+    src: url(Schoolbell-Regular.ttf) format('truetype');
+}
+li {
+    list-style-type: none;
+    width: fit-content;
+}
+a {
+    text-decoration: none;
+    border: solid 2px black;
+    border-radius: 5px;
+    background-color: beige;
+    color: orange;
+    padding: 4px;
+}
+nav ul{
+    grid-area: n;
+    display: grid; 
+    grid-template-columns: 100px 100px;
+    width: 20%;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+}
+img {
+    width: 100%;
+}
+article {
+    grid-area: ar;
+    max-width: 60%;
+    margin: auto;
+    margin-top: 30px;
+}
+table {
+border-collapse: collapse;
+width: auto;
+border: 2px solid black;
+font-size: 18px;
+}
+tr:nth-child(odd) {
+    background-color: #996515;
+}
+tr:nth-child(even) {
+    background-color: beige;
+}
+td {
+    border: solid 1px black;
+    padding: 5px;
+}
+th {
+    border: 1px solid black;
+    padding: 5px;
+}
+footer {
+    grid-area: f;
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: #996515 solid 1px;
+    width: 60%;
+    background-color: #996515;
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+}
+@media screen and (max-width:750px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas: "n"
+        "ar"
+        "f";
+    }    
 }
